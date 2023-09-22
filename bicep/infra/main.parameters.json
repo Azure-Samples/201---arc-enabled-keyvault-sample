@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "ArcK8sName": {
+        "value": ""
+      },
+      "ClusterResourceGroup": {
+        "value": ""
+      },
+      "SampleResourceGroup": {
+        "value": ""
+      },
+      "SampleResourceLocation": {
+        "value": ""
+      },
+      "VaultName": {
+        "value": ""
+      },
+      "objid": {
+        "value": ""
+      },
+      "acrName": {
+        "value": ""
+      },
+      "tokenName": {
+        "value": ""
+      }
+    }
+}
