@@ -68,7 +68,7 @@ Arc-Enabled KeyVault is an Arc extension that can be deployed to Arc-enabled clu
       ```
 
     - **Advanced**: If you'd like to define and create ACR token manually without using the token access permissions defined in the bicep file, you could create a new scope to manage access manually. Take a note of the username and password and define the token scope yourself or use the default scopes. Make sure the scope covers the image you would use in the k8s deployment. It should have the permission to pull the requied image at least.<br/>
-![HowToCreateAToken](https://raw.githubusercontent.com/Azure-Samples/arc-enabled-keyvault-sample/main/screenshots/Token.png)
+![HowToCreateAToken](https://raw.githubusercontent.com/Azure-Samples/201---arc-enabled-keyvault-sample/main/screenshots/Token.png)
 
 <br/>
 
@@ -83,7 +83,7 @@ Arc-Enabled KeyVault is an Arc extension that can be deployed to Arc-enabled clu
       ```
    
     - From Azure Portal
-    ![HowToGeneratePwd](https://raw.githubusercontent.com/Azure-Samples/arc-enabled-keyvault-sample/main/screenshots/Pwd.png) <br />
+    ![HowToGeneratePwd](https://raw.githubusercontent.com/Azure-Samples/201---arc-enabled-keyvault-sample/main/screenshots/Pwd.png) <br />
     record the password in base64 string for later use.
     
 6. Having acquired the password, generate the ACR credential with the following command and take not of the credential:
@@ -106,7 +106,7 @@ Arc-Enabled KeyVault is an Arc extension that can be deployed to Arc-enabled clu
       ```
 
 7. Save the whole json string generated in the previous step as a secret to the AKV created in bicep deployment. You may need to assign yourself access policies in order to create secrets. Take note of the secret name. <br />
-![HowToCreateASecret](https://raw.githubusercontent.com/Azure-Samples/arc-enabled-keyvault-sample/main/screenshots/KV.png)
+![HowToCreateASecret](https://raw.githubusercontent.com/Azure-Samples/201---arc-enabled-keyvault-sample/main/screenshots/KV.png)
 
 8. Push an image to the ACR
     > Note: the credential created in the previous step is based on the token that has '_repositories_pull' privilege as defined in [resource.bicep](.\bicep\infra\resource.bicep) and is intended for the on-prem K8S cluster to pull images from the ACR. To push an image to the ACR you might need to login using your own Azure credentials, or enable Azure KeyVault admin user to login.
