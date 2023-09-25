@@ -86,7 +86,7 @@ Arc-Enabled KeyVault is an Arc extension that can be deployed to Arc-enabled clu
     ![HowToGeneratePwd](https://raw.githubusercontent.com/Azure-Samples/201---arc-enabled-keyvault-sample/main/screenshots/Pwd.png) <br />
     record the password in base64 string for later use.
     
-6. Having acquired the password, generate the ACR credential with the following command and take not of the credential:
+6. Having acquired the password, generate the ACR credential with the following command and take note of the credential:
       ```powershell
       $tokenName = "<your ACR token name>"
       $password = "<password retrieved from the previous step>"
